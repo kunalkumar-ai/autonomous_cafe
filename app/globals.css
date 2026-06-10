@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cafe-bg: #0d0805;
+  --cafe-accent: #c8922a;
+  --cafe-light: #f5d07a;
+  --agent-text: #f0e6d3;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--cafe-bg);
+  color: var(--agent-text);
+  overflow: hidden;
+  margin: 0;
+}
