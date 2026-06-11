@@ -19,8 +19,7 @@ export function OrderStatusBar() {
   const idx = STAGES.findIndex((s) => s.key === order.stage)
 
   return (
-    <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex items-center gap-1"
-      style={{ backdropFilter: 'blur(8px)' }}>
+    <div style={{ position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%)', zIndex: 50, display: 'flex', alignItems: 'center', gap: '4px', backdropFilter: 'blur(8px)' }}>
       {STAGES.map((s, i) => (
         <div key={s.key} className="flex items-center">
           <motion.div

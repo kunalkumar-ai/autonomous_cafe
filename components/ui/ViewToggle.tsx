@@ -6,7 +6,7 @@ export function ViewToggle() {
   const { viewMode, setViewMode, startOrder, order, resetCafe } = useCafeState()
 
   return (
-    <div className="absolute top-5 right-5 z-10 flex flex-col items-end gap-2">
+    <div style={{ position: 'fixed', top: '20px', right: '20px', zIndex: 50, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px' }}>
       <div className="flex rounded-full p-1 gap-1" style={{ backgroundColor: 'rgba(26,15,10,0.85)', border: '1px solid #3d2510', backdropFilter: 'blur(8px)' }}>
         {(['god', 'customer'] as const).map((mode) => (
           <button key={mode} onClick={() => setViewMode(mode)}

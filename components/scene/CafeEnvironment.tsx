@@ -51,7 +51,7 @@ function PendantLights() {
             <sphereGeometry args={[0.12]} />
             <meshStandardMaterial color="#c8922a" emissive="#c8922a" emissiveIntensity={1} />
           </mesh>
-          <pointLight color="#f5d07a" intensity={1.5} distance={6} decay={2} castShadow />
+          <pointLight color="#f5d07a" intensity={4} distance={10} decay={1.5} castShadow />
         </group>
       ))}
     </>
@@ -61,14 +61,15 @@ function PendantLights() {
 export function CafeEnvironment() {
   return (
     <>
-      <ambientLight intensity={0.3} color="#3d2510" />
+      <ambientLight intensity={1.2} color="#f5d07a" />
       <directionalLight
         position={[5, 8, 5]}
-        intensity={0.8}
+        intensity={2.5}
         color="#f5d07a"
         castShadow
         shadow-mapSize={[1024, 1024]}
       />
+      <directionalLight position={[-5, 6, 3]} intensity={1.0} color="#fff8e7" />
       <FloorTiles />
       <TileGrid />
       <Walls />
